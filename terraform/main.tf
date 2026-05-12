@@ -14,7 +14,7 @@ terraform {
 
   # Backend for state management
   backend "s3" {
-    bucket = "taskflow-terraform-state"
+    bucket = "taskflow-terraform-destiny-operator"
     key    = "prod/terraform.tfstate"
     region = "us-east-1"
     encrypt = true

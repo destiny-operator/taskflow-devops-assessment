@@ -3,3 +3,6 @@ coverage/
 .env
 *.pem
 .DS_Store
+terraform/.terraform/
+terraform/terraform.tfstate*
+terraform/.terraform.lock.hcl

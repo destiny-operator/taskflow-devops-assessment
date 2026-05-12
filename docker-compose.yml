@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  taskflow-app:
+    build: .
+    container_name: taskflow-demo
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    labels:
+      - "com.taskflow.description=DevOps Demo Application"
+      - "com.taskflow.version=1.0.0"

@@ -1,0 +1,26 @@
+{
+  "name": "taskflow-app",
+  "version": "1.0.0",
+  "description": "TaskFlow - DevOps Demo Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "lint": "eslint app.js",
+    "start": "python -m http.server 8080"
+  },
+  "keywords": ["devops", "ci-cd", "todo", "demo"],
+  "author": "DevOps Student",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "eslint": "^8.57.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "app.js"
+    ]
+  }
+}

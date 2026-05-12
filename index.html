@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - DevOps Demo Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1>TaskFlow</h1>
+                <p class="subtitle">Simple Task Management for DevOps Demo</p>
+            </div>
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span class="status-text">Live</span>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="Add a new task..."
+                    autocomplete="off"
+                >
+                <button id="addTaskBtn" class="btn-primary">
+                    <span>Add Task</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 4V16M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat">
+                    <span class="stat-label">Total</span>
+                    <span class="stat-value" id="totalTasks">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Active</span>
+                    <span class="stat-value" id="activeTasks">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Completed</span>
+                    <span class="stat-value" id="completedTasks">0</span>
+                </div>
+            </div>
+
+            <div class="task-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <div id="taskList" class="task-list"></div>
+
+            <div class="empty-state" id="emptyState">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                    <circle cx="40" cy="40" r="35" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                    <path d="M40 25V55M25 40H55" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <p>No tasks yet. Add one to get started!</p>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>DevOps Pipeline Demo Application | Built with HTML, CSS, JavaScript</p>
+            <p class="version">v1.0.0</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

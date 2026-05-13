@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-  DOCKER_IMAGE: taskflow-app
+  DOCKER_IMAGE: sailor4/taskflow-app
   AWS_REGION: us-east-1
 
 jobs:
